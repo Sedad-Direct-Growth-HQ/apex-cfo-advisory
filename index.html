@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8fa" />
+    <meta name="description" content="Forward-looking fractional CFO services for B2B SaaS founders. Build cash flow architecture, improve unit economics, and plan for healthier margins." />
+    <title>Apex CFO Advisory | SaaS Runway &amp; Margin Architecture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#111827',
+              navy: '#1e3a8a',
+              slate: '#617086',
+              canvas: '#f7f8fa',
+              platinum: '#e5e7eb',
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['Georgia', 'Times New Roman', 'serif'],
+            },
+            boxShadow: {
+              panel: '0 22px 60px rgba(24, 39, 70, .10)',
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+      body { color: #111827; background: #f7f8fa; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      ::selection { color: #fff; background: #1e3a8a; }
+      .brand-mark svg { width: 36px; height: 36px; }
+      .serif-italic { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 400; }
+      .section-kicker { display: flex; align-items: center; gap: 10px; color: #53617a; font-size: 9px; font-weight: 700; letter-spacing: .13em; }
+      .section-kicker::before { content: ""; width: 22px; height: 1px; background: #1e3a8a; }
+      .eyebrow { color: #8690a1; font-size: 7px; font-weight: 700; letter-spacing: .14em; }
+      .dashboard-grid { background-image: linear-gradient(to bottom, transparent calc(25% - 1px), #e8ebf1 calc(25% - 1px), #e8ebf1 25%, transparent 25%); background-size: 100% 40px; }
+      .bucket-line { height: 3px; background: #e9edf3; }
+      .bucket-line span { display: block; height: 100%; background: #1e3a8a; }
+      .bucket-line.tax span { width: 28%; background: #798bab; }
+      .bucket-line.growth span { width: 72%; background: #aebbd0; }
+      .case-bars { height: 74px; display: flex; align-items: end; gap: 7px; border-bottom: 1px solid rgba(224,231,240,.25); }
+      .case-bars i { width: 8%; height: 19%; background: #7389ad; }
+      .case-bars i:nth-child(2) { height: 25%; }.case-bars i:nth-child(3) { height: 32%; }.case-bars i:nth-child(4) { height: 29%; }.case-bars i:nth-child(5) { height: 37%; }.case-bars i:nth-child(6) { height: 42%; }.case-bars i:nth-child(7) { height: 48%; }.case-bars i:nth-child(8) { height: 53%; }.case-bars i:nth-child(9) { height: 61%; }.case-bars i:nth-child(10) { height: 70%; }.case-bars i:nth-child(11) { height: 80%; }.case-bars i:nth-child(12) { height: 93%; background: #c3d0e5; }
+      dialog { width: min(620px, calc(100% - 28px)); max-height: min(90vh, 900px); padding: 0; border: 1px solid #e1e5ec; border-radius: 8px; color: #111827; background: #fff; box-shadow: 0 30px 100px rgba(17,24,39,.3); }
+      dialog::backdrop { background: rgba(11, 18, 32, .68); backdrop-filter: blur(4px); }
+      .form-step[hidden] { display: none; }
+      .form-input { width: 100%; min-height: 43px; border: 1px solid #dce1e9; border-radius: 3px; padding: 0 12px; outline: none; color: #263449; background: #fff; font: inherit; font-size: 12px; }
+      .form-input:focus { border-color: #7387ae; box-shadow: 0 0 0 3px rgba(30,58,138,.1); }
+      textarea.form-input { min-height: 94px; padding-top: 11px; resize: vertical; }
+      .faq-item[open] summary svg { transform: rotate(180deg); }
+      @media (max-width: 640px) {
+        html { scroll-padding-top: 70px; }
+        .desktop-nav { display: none !important; }
+        .hero-heading { font-size: clamp(42px, 12vw, 61px); }
+        .mobile-stack { display: flex; flex-direction: column; align-items: flex-start; }
+        .mobile-cta { width: 100%; }
+        .mobile-card { padding: 17px; }
+      }
+      @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+    </style>
+  </head>
+  <body class="antialiased">
+    <header class="sticky top-0 z-40 border-b border-ink/10 bg-canvas/95 backdrop-blur-xl">
+      <div class="mx-auto flex h-[72px] w-[min(1240px,calc(100%-40px))] items-center justify-between gap-4">
+        <a href="#top" class="flex shrink-0 items-center gap-2.5" aria-label="Apex CFO Advisory home">
+          <span class="brand-mark text-navy" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M24.6 25.2h5.1V11.95a5.1 5.1 0 0 0-5.1-5.1H11.4v5.1m13.2 13.25v5.1H11.95a5.1 5.1 0 0 1-5.1-5.1V11.95m4.55 0v11.7l11.7-11.7h-11.7Zm13.2 13.25v-11.7l-11.7 11.7h11.7Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+          <span class="flex flex-col leading-none"><strong class="text-[16px] font-extrabold tracking-[.17em]">APEX</strong><span class="mt-1 text-[8px] font-bold tracking-[.2em] text-slate">CFO ADVISORY</span></span>
+        </a>
+        <nav class="desktop-nav flex items-center gap-7 text-[11px] font-semibold text-slate" aria-label="Main navigation">
+          <a class="transition hover:text-navy" href="#services">What we do</a><a class="transition hover:text-navy" href="#method">Our method</a><a class="transition hover:text-navy" href="#proof">Results</a><a class="transition hover:text-navy" href="#about">About</a>
+        </nav>
+        <button data-open-application class="inline-flex min-h-10 items-center gap-2 rounded-sm bg-ink px-4 text-[10px] font-bold text-white transition hover:bg-slate">Book an audit <span aria-hidden="true">→</span></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="relative overflow-hidden bg-[radial-gradient(ellipse_at_78%_36%,rgba(226,232,243,.8),transparent_39%)] py-14 sm:py-[72px]">
+        <div class="mx-auto grid w-[min(1240px,calc(100%-40px))] items-center gap-9 lg:grid-cols-[.96fr_1.04fr] lg:gap-[72px]">
+          <div class="relative z-10">
+            <p class="flex flex-wrap items-center gap-2.5 text-[9px] font-bold tracking-[.13em] text-[#53617a]"><span class="h-px w-[22px] bg-navy"></span>FRACTIONAL CFO FOR B2B SAAS <span class="text-[#a7afbd]">/</span> $2M–$10M ARR</p>
+            <h1 class="hero-heading mt-5 text-[clamp(44px,6vw,67px)] font-semibold leading-[1.035] tracking-[-.065em] text-ink">Your revenue is growing.<br><span class="serif-italic text-navy">Your cash isn’t.</span><br>Let’s find out why.</h1>
+            <p class="mt-5 max-w-[485px] text-[14px] leading-7 text-[#566276]">Apex gives SaaS founders a forward-looking CFO, a clear cash architecture, and the operating discipline to make profit a system—not a hope.</p>
+            <div class="mobile-stack mt-7 flex flex-wrap items-center gap-5">
+              <button data-open-application class="mobile-cta inline-flex min-h-[50px] items-center justify-center gap-3 rounded-sm bg-navy px-5 text-[11px] font-bold text-white shadow-lg shadow-navy/10 transition hover:bg-[#183170]">Book your runway &amp; margin audit <span aria-hidden="true">→</span></button>
+              <a href="#method" class="inline-flex items-center gap-2 text-[11px] font-bold text-navy">See how we work <span aria-hidden="true">↘</span></a>
+            </div>
+            <p class="mt-2 text-[9px] text-[#818b9a]">30 minutes. Founder-to-CFO. No pitch deck.</p>
+            <div class="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 text-[10px] text-[#657084]"><span class="h-7 w-px bg-[#cfd5df]"></span><span><strong class="text-ink">24</strong> SaaS companies restructured</span><span><strong class="text-ink">+14.2 pts</strong> average net margin gain*</span></div>
+          </div>
+          <div class="relative">
+            <div class="overflow-hidden rounded-lg border border-[#e6e9ef] bg-white shadow-panel">
+              <div class="flex h-10 items-center justify-between border-b border-[#eef0f4] bg-[#fcfcfd] px-4"><div class="flex gap-1"><i class="h-1.5 w-1.5 rounded-full border border-[#b9c0cc]"></i><i class="h-1.5 w-1.5 rounded-full border border-[#b9c0cc]"></i><i class="h-1.5 w-1.5 rounded-full border border-[#b9c0cc]"></i></div><span class="text-[7px] font-bold tracking-[.12em] text-[#788295]">CFO VIEW <span class="px-1 text-[#bbc2cd]">·</span> 12-MONTH PLAN</span><span class="text-xs tracking-widest text-[#8f98a7]">•••</span></div>
+              <div class="p-5 sm:p-6">
+                <div class="flex items-start justify-between"><div><span class="eyebrow">CASH POSITION</span><h2 class="mt-1 text-[15px] font-bold tracking-tight text-[#192334]">Runway &amp; margin</h2></div><span class="mt-1 flex items-center gap-1.5 text-[7px] font-bold tracking-[.08em] text-[#68758b]"><i class="h-1.5 w-1.5 rounded-full bg-navy"></i>EXAMPLE MODEL</span></div>
+                <div class="mt-5 grid grid-cols-2 gap-3">
+                  <div class="rounded border border-[#edf0f4] p-3"><span class="text-[9px] text-[#7e8999]">Cash runway</span><strong class="mt-1 block text-[23px] font-bold tracking-[-.05em]">26.4 <small class="text-[10px] font-normal tracking-normal text-[#737f92]">mo</small></strong><span class="mt-1 block text-[8px] text-navy">↗ +4.2 mo</span></div>
+                  <div class="rounded border border-[#edf0f4] p-3"><span class="text-[9px] text-[#7e8999]">Net margin</span><strong class="mt-1 block text-[23px] font-bold tracking-[-.05em]">31.8<small class="text-[10px] font-normal tracking-normal text-[#737f92]">%</small></strong><span class="mt-1 block text-[8px] text-navy">↗ +6.4 pts</span></div>
+                </div>
+                <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-[7px] font-bold tracking-[.07em] text-[#778296]"><span class="flex items-center gap-1.5"><i class="h-1.5 w-1.5 rounded-full bg-[#284d91]"></i>CASH BALANCE</span><span class="flex items-center gap-1.5"><i class="h-1.5 w-1.5 rounded-full bg-[#aab4c7]"></i>FORECAST</span><span class="ml-auto text-[6px]">NEXT 12 MONTHS</span></div>
+                <div class="mt-2 grid grid-cols-[35px_1fr] gap-2"><div class="flex flex-col justify-between pb-5 pt-1 text-[7px] text-[#a0a8b5]"><span>$2.0m</span><span>$1.5m</span><span>$1.0m</span><span>$0.5m</span></div><div class="relative h-[150px]"><svg class="h-full w-full" viewBox="0 0 500 160" role="img" aria-label="Illustrative cash balance forecast trending upward" preserveAspectRatio="none"><defs><linearGradient id="cashFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3157a5" stop-opacity=".2"/><stop offset="100%" stop-color="#3157a5" stop-opacity="0"/></linearGradient></defs><path d="M0 135H500M0 95H500M0 55H500M0 15H500" stroke="#e8ebf1" stroke-dasharray="3 5"/><path d="M0 126 C30 120 39 114 65 117 S108 104 130 106 S170 93 195 99 S235 82 260 87 S297 71 325 78 S360 58 390 65 S432 43 455 49 S478 31 500 23V160H0Z" fill="url(#cashFill)"/><path d="M0 126 C30 120 39 114 65 117 S108 104 130 106 S170 93 195 99 S235 82 260 87 S297 71 325 78 S360 58 390 65 S432 43 455 49 S478 31 500 23" fill="none" stroke="#284d91" stroke-width="3" stroke-linecap="round"/><path d="M260 87 C297 81 300 72 325 75 S360 63 390 57 S432 45 455 40 S478 27 500 16" fill="none" stroke="#aab4c7" stroke-width="2" stroke-dasharray="5 5"/><circle cx="325" cy="78" r="5" fill="#284d91" stroke="white" stroke-width="3"/></svg><div class="absolute inset-x-0 bottom-0 flex justify-between text-[7px] text-[#a0a8b5]"><span>JUL</span><span>SEP</span><span>NOV</span><span>JAN</span><span>MAR</span><span>MAY</span><span>JUL</span></div></div></div>
+                <div class="mt-3 flex items-center gap-3 rounded border border-[#e6ebf3] bg-[#f8f9fb] p-3"><span class="grid h-7 w-7 place-items-center rounded bg-[#e8edf6] text-sm text-navy">↗</span><span class="flex-1"><strong class="block text-[9px] text-[#273448]">One lever to watch</strong><small class="mt-0.5 block text-[8px] text-[#7a8697]">Hiring pace is the main driver of runway this quarter.</small></span><span class="text-xs text-[#778296]">→</span></div>
+                <div class="mt-2 flex justify-between gap-3 text-[7px] text-[#8490a0]"><span>Illustrative model · example figures</span><span>Board-ready clarity, built around your numbers</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="mx-auto mt-3 w-[min(1240px,calc(100%-40px))] text-right text-[8px] text-[#9aa2ad]">*Average reported across six months; individual results vary.</p>
+      </section>
+
+      <section id="problem" class="bg-ink py-16 text-white sm:py-24">
+        <div class="mx-auto grid w-[min(1160px,calc(100%-40px))] gap-9 lg:grid-cols-[.82fr_1.18fr] lg:gap-28">
+          <div><p class="section-kicker !text-[#a8b4cb] before:!bg-[#859bc4]">THE CASH GAP</p><h2 class="mt-5 text-[clamp(35px,5vw,49px)] font-semibold leading-[1.12] tracking-[-.055em]">You hit the number.<br><span class="serif-italic text-[#aebad1]">The bank balance doesn’t match.</span></h2><p class="mt-5 max-w-[420px] text-[13px] leading-7 text-[#aeb7c5]">MRR is up. The quarter closed. But the cash account is lower than you expected—and no one can tell you exactly why.</p><p class="mt-5 max-w-[420px] border-l-2 border-[#8297bd] pl-4 text-[12px] font-medium leading-6 text-[#f0f2f6]">This isn’t a revenue problem. It’s a visibility and architecture problem. And it compounds every month it goes unsolved.</p></div>
+          <div class="divide-y divide-white/15 border-y border-white/15">
+            <article class="grid grid-cols-[30px_1fr_18px] gap-3 py-5"><span class="text-[10px] font-bold tracking-wider text-[#8e9bb1]">01</span><div><h3 class="text-[14px] font-semibold">Runway is a range, not a number</h3><p class="mt-1 text-[11px] leading-5 text-[#aeb7c5]">You can’t say with confidence how many months of cash you really have.</p></div><span class="text-[#8fa2c4]">↗</span></article>
+            <article class="grid grid-cols-[30px_1fr_18px] gap-3 py-5"><span class="text-[10px] font-bold tracking-wider text-[#8e9bb1]">02</span><div><h3 class="text-[14px] font-semibold">Every decision feels expensive</h3><p class="mt-1 text-[11px] leading-5 text-[#aeb7c5]">Hiring, pricing, and growth spend are guesses you hope won’t hurt.</p></div><span class="text-[#8fa2c4]">↗</span></article>
+            <article class="grid grid-cols-[30px_1fr_18px] gap-3 py-5"><span class="text-[10px] font-bold tracking-wider text-[#8e9bb1]">03</span><div><h3 class="text-[14px] font-semibold">Reporting looks backward</h3><p class="mt-1 text-[11px] leading-5 text-[#aeb7c5]">Your bookkeeper explains what happened. Nobody helps decide what happens next.</p></div><span class="text-[#8fa2c4]">↗</span></article>
+            <article class="grid grid-cols-[30px_1fr_18px] gap-3 py-5"><span class="text-[10px] font-bold tracking-wider text-[#8e9bb1]">04</span><div><h3 class="text-[14px] font-semibold">The milestone is getting closer</h3><p class="mt-1 text-[11px] leading-5 text-[#aeb7c5]">You need the cash to carry you there—but the forecast doesn’t feel trustworthy.</p></div><span class="text-[#8fa2c4]">↗</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-b border-[#e4e8ee] bg-[#eef1f5] py-16 sm:py-[76px]" aria-labelledby="calculator-title">
+        <div class="mx-auto grid w-[min(1160px,calc(100%-40px))] items-center gap-7 lg:grid-cols-[.76fr_1.24fr] lg:gap-24">
+          <div><p class="section-kicker">A QUICK FIRST LOOK</p><h2 id="calculator-title" class="mt-5 text-[clamp(33px,4.5vw,44px)] font-semibold leading-[1.13] tracking-[-.055em]">How long does your cash really last?</h2><p class="mt-3 max-w-[390px] text-[11px] leading-6 text-[#687487]">Start with a simple estimate. Your actual runway depends on timing, collections, working capital, and the decisions ahead.</p><p class="mt-5 flex max-w-[390px] items-start gap-2 text-[8px] leading-5 text-[#838d9c]"><span class="text-sm text-[#61718b]" aria-hidden="true">ⓘ</span><span>This is an estimate, not a forecast or financial advice. Your CFO model should account for timing, taxes, debt, and one-time costs.</span></p></div>
+          <div class="mobile-card rounded border border-[#dfe4eb] bg-white p-5 shadow-[0_13px_34px_rgba(24,39,70,.05)]">
+            <div class="flex items-center gap-3 border-b border-[#edf0f4] pb-4"><span class="grid h-8 w-8 place-items-center rounded bg-[#eef2f8] text-navy" aria-hidden="true">▦</span><div><strong class="block text-[8px] tracking-[.1em] text-[#344055]">SAAS BURN-RATE CALCULATOR</strong><small class="mt-1 block text-[8px] text-[#8590a1]">Three inputs. A clearer starting point.</small></div><span class="ml-auto flex items-center gap-1 text-[6px] font-bold tracking-widest text-[#6e7a8d]"><i class="h-1.5 w-1.5 rounded-full bg-[#526d9c]"></i>PRIVATE</span></div>
+            <div class="grid gap-3 py-4 sm:grid-cols-3">
+              <label class="flex flex-col gap-1.5 text-[8px] font-semibold text-[#4f5b70]">Cash available<input id="cashInput" class="form-input !h-10 !min-h-10 !px-2 text-[10px]" type="number" min="0" step="any" inputmode="decimal" placeholder="$ 1,200,000"></label>
+              <label class="flex flex-col gap-1.5 text-[8px] font-semibold text-[#4f5b70]">Monthly cash outflow<input id="outflowInput" class="form-input !h-10 !min-h-10 !px-2 text-[10px]" type="number" min="0" step="any" inputmode="decimal" placeholder="$ 240,000"></label>
+              <label class="flex flex-col gap-1.5 text-[8px] font-semibold text-[#4f5b70]">Monthly recurring cash receipts<input id="receiptsInput" class="form-input !h-10 !min-h-10 !px-2 text-[10px]" type="number" min="0" step="any" inputmode="decimal" placeholder="$ 180,000"></label>
+            </div>
+            <div id="calculatorResult" class="min-h-[78px] rounded border border-[#e5e9ef] bg-[#f8f9fb] px-4 py-3" aria-live="polite"><span class="block text-[6px] font-bold tracking-[.12em] text-[#778397]">YOUR ESTIMATE WILL APPEAR HERE</span><strong class="mt-1 block text-[17px] font-semibold tracking-tight text-[#344055]">Enter your three numbers</strong><small class="mt-1 block text-[8px] text-[#7d8898]">Values are calculated in this browser and are not saved.</small></div>
+            <div class="mt-3 flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between"><span class="text-[6px] font-bold tracking-[.09em] text-[#8993a2]">NO EMAIL REQUIRED · NOTHING IS STORED</span><button data-open-application class="text-[8px] font-bold text-navy hover:underline">Talk through your numbers →</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="method" class="mx-auto w-[min(1160px,calc(100%-40px))] py-16 sm:py-24">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"><div><p class="section-kicker">THE APEX METHOD</p><h2 class="mt-5 text-[clamp(34px,4.5vw,47px)] font-semibold leading-[1.12] tracking-[-.055em]">Most CFOs report the past.<br><span class="serif-italic text-navy">We build the system that steers what’s next.</span></h2></div><p class="max-w-[350px] text-[12px] leading-6 text-[#667286]">Profit should not be whatever is left at the end of the month. It should be part of how money moves through the business.</p></div>
+        <div class="mt-8 rounded border border-[#e1e5ec] bg-white p-5 shadow-[0_13px_36px_rgba(24,39,70,.045)] sm:p-8">
+          <div class="flex items-center justify-between gap-4"><div><span class="eyebrow">A SIMPLE OPERATING MODEL</span><h3 class="mt-1 text-[20px] font-semibold tracking-tight sm:text-[23px]">The Three-Bucket Cash Architecture</h3></div><span class="grid h-11 w-11 place-items-center rounded border border-[#e3e8f1] bg-[#f8f9fc] text-navy" aria-hidden="true">▣</span></div>
+          <p class="mt-3 max-w-[650px] text-[11px] leading-6 text-[#677386]">Every dollar has a job before it leaves the account. The allocation is designed around your operating plan and actual unit economics.</p>
+          <div class="mt-6 grid gap-3 md:grid-cols-3">
+            <article class="rounded border border-[#e8ebf0] p-5"><div class="flex justify-between"><span class="grid h-8 w-8 place-items-center rounded border border-[#dfe6f1] bg-[#f2f5fa] text-sm text-navy">▣</span><span class="text-[8px] font-bold tracking-widest text-[#aab2bf]">01</span></div><h4 class="mt-4 text-[14px] font-bold">Operating capital</h4><p class="mt-2 min-h-12 text-[10px] leading-5 text-[#6c7788]">What it takes to run the business—planned with a clear view of fixed and variable costs.</p><div class="bucket-line mt-4"><span class="w-[58%]"></span></div><span class="mt-2 block text-[7px] font-bold tracking-widest text-[#8993a2]">RUN THE BUSINESS</span></article>
+            <article class="rounded border border-[#e8ebf0] p-5"><div class="flex justify-between"><span class="grid h-8 w-8 place-items-center rounded border border-[#dfe6f1] bg-[#f2f5fa] text-sm text-navy">◇</span><span class="text-[8px] font-bold tracking-widest text-[#aab2bf]">02</span></div><h4 class="mt-4 text-[14px] font-bold">Tax reserves</h4><p class="mt-2 min-h-12 text-[10px] leading-5 text-[#6c7788]">Set aside before it becomes spendable cash. Fewer surprises, better decisions.</p><div class="bucket-line tax mt-4"><span></span></div><span class="mt-2 block text-[7px] font-bold tracking-widest text-[#8993a2]">PROTECT THE BASE</span></article>
+            <article class="rounded border border-[#e8ebf0] p-5"><div class="flex justify-between"><span class="grid h-8 w-8 place-items-center rounded border border-[#dfe6f1] bg-[#f2f5fa] text-sm text-navy">↗</span><span class="text-[8px] font-bold tracking-widest text-[#aab2bf]">03</span></div><h4 class="mt-4 text-[14px] font-bold">Growth reinvestment</h4><p class="mt-2 min-h-12 text-[10px] leading-5 text-[#6c7788]">A deliberate share for hiring, product, and acquisition—sized to payback reality.</p><div class="bucket-line growth mt-4"><span></span></div><span class="mt-2 block text-[7px] font-bold tracking-widest text-[#8993a2]">FUND WHAT WORKS</span></article>
+          </div>
+          <div class="mt-5 flex flex-col gap-3 border-t border-[#edf0f4] pt-4 text-[9px] text-[#5c687b] sm:flex-row sm:items-center sm:justify-between"><span><strong class="text-navy">✓</strong> Decisions are made in the plan—not re-argued every month.</span><span class="text-[7px] font-bold tracking-widest text-[#909aa8]">ALLOCATION IS COMPANY-SPECIFIC</span></div>
+        </div>
+      </section>
+
+      <section id="services" class="bg-[#eef1f5] py-16 sm:py-[88px]">
+        <div class="mx-auto w-[min(1160px,calc(100%-40px))]">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"><div><p class="section-kicker">THE ENGAGEMENT</p><h2 class="mt-5 text-[clamp(34px,4.5vw,47px)] font-semibold leading-[1.12] tracking-[-.055em]">A CFO in the room.<br><span class="serif-italic text-navy">A system behind every decision.</span></h2></div><p class="max-w-[350px] text-[12px] leading-6 text-[#667286]">The SaaS Runway &amp; Margin Acceleration Program pairs a dedicated fractional CFO with weekly strategic sprints and a practical operating model.</p></div>
+          <div class="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <article class="flex min-h-[205px] flex-col rounded border border-[#e1e5eb] bg-white p-5"><div class="flex justify-between text-[8px] font-bold tracking-widest text-[#8b95a4]"><span>01</span><span class="text-lg text-navy">◷</span></div><h3 class="mt-6 text-[14px] font-semibold">Cash flow forecasting</h3><p class="mt-2 flex-1 text-[10px] leading-5 text-[#697587]">A rolling view of cash, burn, and runway—so surprises show up in the model before they show up in the bank account.</p><span class="mt-4 border-t border-[#edf0f4] pt-3 text-[6px] font-bold tracking-widest text-[#8792a2]">BUILT FOR SAAS OPERATORS</span></article>
+            <article class="flex min-h-[205px] flex-col rounded border border-[#e1e5eb] bg-white p-5"><div class="flex justify-between text-[8px] font-bold tracking-widest text-[#8b95a4]"><span>02</span><span class="text-lg text-navy">◎</span></div><h3 class="mt-6 text-[14px] font-semibold">Unit economics</h3><p class="mt-2 flex-1 text-[10px] leading-5 text-[#697587]">Understand acquisition payback, retention, and contribution margin. Put growth spend behind customers who pay back.</p><span class="mt-4 border-t border-[#edf0f4] pt-3 text-[6px] font-bold tracking-widest text-[#8792a2]">BUILT FOR SAAS OPERATORS</span></article>
+            <article class="flex min-h-[205px] flex-col rounded border border-[#e1e5eb] bg-white p-5"><div class="flex justify-between text-[8px] font-bold tracking-widest text-[#8b95a4]"><span>03</span><span class="text-lg text-navy">$</span></div><h3 class="mt-6 text-[14px] font-semibold">Pricing &amp; margin</h3><p class="mt-2 flex-1 text-[10px] leading-5 text-[#697587]">Pressure-test packaging, discounting, and delivery costs to uncover profit already inside your business.</p><span class="mt-4 border-t border-[#edf0f4] pt-3 text-[6px] font-bold tracking-widest text-[#8792a2]">BUILT FOR SAAS OPERATORS</span></article>
+            <article class="flex min-h-[205px] flex-col rounded border border-[#e1e5eb] bg-white p-5"><div class="flex justify-between text-[8px] font-bold tracking-widest text-[#8b95a4]"><span>04</span><span class="text-lg text-navy">⌁</span></div><h3 class="mt-6 text-[14px] font-semibold">Board-ready reporting</h3><p class="mt-2 flex-1 text-[10px] leading-5 text-[#697587]">A concise operating view that connects revenue, cash, and decisions—prepared for a room that asks hard questions.</p><span class="mt-4 border-t border-[#edf0f4] pt-3 text-[6px] font-bold tracking-widest text-[#8792a2]">BUILT FOR SAAS OPERATORS</span></article>
+          </div>
+          <div class="mt-4 flex flex-col gap-2 border border-[#dfe4eb] bg-white/60 p-4 text-[9px] text-[#596579] sm:flex-row sm:flex-wrap sm:items-center sm:gap-5"><strong class="text-[7px] tracking-widest text-[#8a94a3]">ALSO INCLUDED</strong><span>· Weekly strategic sprints</span><span>· Pricing tier audits</span><span>· Board-ready dashboards</span><span>· Three-Bucket implementation</span></div>
+        </div>
+      </section>
+
+      <section id="about" class="bg-[#172236] py-16 text-white sm:py-24">
+        <div class="mx-auto grid w-[min(1160px,calc(100%-40px))] items-center gap-9 lg:grid-cols-2 lg:gap-24">
+          <div><p class="section-kicker !text-[#b2bfd5] before:!bg-[#94a9cf]">THE DIFFERENCE YOU FEEL</p><h2 class="mt-5 text-[clamp(36px,4.8vw,50px)] font-semibold leading-[1.1] tracking-[-.055em]">Know what the next quarter holds—before it starts.</h2><p class="mt-5 max-w-[465px] text-[12px] leading-6 text-[#b8c1cf]">You check the account and it matches the forecast. You see runway, margin, and the lever to pull next—without spreadsheet archaeology.</p><p class="mt-3 max-w-[465px] text-[12px] leading-6 text-[#b8c1cf]">When an investor asks about unit economics, you can answer in one breath. You stop hoping the cash holds. You know what the numbers say.</p><div class="mt-7 flex gap-10"><div><strong class="text-[28px] font-semibold tracking-tight">30%+</strong><span class="mt-1 block text-[9px] text-[#aeb9ca]">net margin target</span></div><div><strong class="text-[28px] font-semibold tracking-tight">24+ mo</strong><span class="mt-1 block text-[9px] text-[#aeb9ca]">runway target</span></div></div><small class="mt-3 block text-[8px] text-[#8290a4]">Targets are planning objectives, not promised outcomes.</small></div>
+          <div class="rounded border border-white/20 bg-[#1e2b40] p-5 shadow-2xl sm:p-6"><div class="flex justify-between gap-3 text-[7px] font-bold tracking-[.1em] text-[#a6b0c1]"><span>WEEKLY CFO BRIEF</span><span class="flex items-center gap-1.5"><i class="h-1.5 w-1.5 rounded-full bg-[#93a6c8]"></i>EXAMPLE VIEW</span></div><h3 class="mt-6 text-[17px] font-semibold">The lever to pull this week</h3><div class="mt-4 flex items-center gap-3 border border-white/10 bg-black/10 p-3"><span class="grid h-7 w-7 place-items-center bg-white/10 text-sm text-[#c9d4e8]">↗</span><span><strong class="block text-[10px]">Right-size acquisition spend</strong><small class="mt-1 block text-[8px] text-[#aab5c7]">Shift budget toward the tier with proven payback.</small></span></div><div class="mt-3 grid grid-cols-2 gap-2"><div class="border border-white/10 p-3"><span class="text-[6px] font-bold tracking-widest text-[#9ca9bd]">PAYBACK PERIOD</span><strong class="mt-2 block text-xl">11.2 <small class="text-[8px] font-normal">mo</small></strong><em class="text-[7px] not-italic text-[#b9c9e2]">↓ 2.8 mo vs. prior</em></div><div class="border border-white/10 p-3"><span class="text-[6px] font-bold tracking-widest text-[#9ca9bd]">CONTRIBUTION MARGIN</span><strong class="mt-2 block text-xl">68.4<small class="text-[8px] font-normal">%</small></strong><em class="text-[7px] not-italic text-[#b9c9e2]">↑ 4.1 pts vs. prior</em></div></div><p class="mt-3 border-t border-white/10 pt-3 text-[7px] text-[#8896aa]">Illustrative dashboard content. Actual analysis is company-specific.</p></div>
+        </div>
+      </section>
+
+      <section id="proof" class="mx-auto w-[min(1160px,calc(100%-40px))] py-16 sm:py-24">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"><div><p class="section-kicker">DOCUMENTED OUTCOMES</p><h2 class="mt-5 text-[clamp(34px,4.5vw,47px)] font-semibold tracking-[-.055em]">Proof, in operating numbers.</h2></div><p class="max-w-[290px] text-[11px] leading-6 text-[#667286]">Focused on the numbers that change a founder’s next decision—not vanity metrics.</p></div>
+        <div class="mt-7 grid overflow-hidden rounded border border-[#e1e5eb] bg-white md:grid-cols-3"><div class="flex min-h-[100px] flex-col justify-center p-5 md:border-r md:border-[#e8ebf0]"><strong class="text-[34px] font-semibold tracking-[-.06em] text-navy">24</strong><span class="mt-1 text-[10px] text-[#6e7a8c]">B2B SaaS companies restructured</span></div><div class="flex min-h-[100px] flex-col justify-center border-t border-[#e8ebf0] p-5 md:border-r md:border-t-0"><strong class="text-[34px] font-semibold tracking-[-.06em] text-navy">+14.2 <small class="text-sm">pts</small></strong><span class="mt-1 text-[10px] text-[#6e7a8c]">average net margin gain in six months</span></div><div class="flex min-h-[100px] flex-col justify-center border-t border-[#e8ebf0] p-5 md:border-t-0"><strong class="text-[34px] font-semibold tracking-[-.06em] text-navy">$180k</strong><span class="mt-1 text-[10px] text-[#6e7a8c]">annual recurring profit added in 90 days</span></div></div>
+        <article class="mt-7 grid overflow-hidden rounded border border-[#e1e5eb] bg-white md:grid-cols-[1fr_.92fr]">
+          <div class="p-6 sm:p-9"><span class="text-[8px] font-bold tracking-[.12em] text-[#7d8899]">FEATURED CASE STUDY <span class="px-1">·</span> CLOUDSCALE</span><h3 class="mt-5 text-[27px] font-semibold leading-tight tracking-[-.05em]">From server waste to<br>$180k in annual profit.</h3><p class="mt-4 max-w-[440px] text-[11px] leading-6 text-[#677386]">A B2B SaaS platform identified excess infrastructure spend and reworked its tier-two pricing model. The combined changes added $180,000 in annual recurring profit within 90 days.</p><div class="mt-6 flex items-center gap-3 border-t border-[#ebedf1] pt-4"><span class="text-lg text-navy" aria-hidden="true">◇</span><span><strong class="block text-[9px] text-[#334055]">CPA-reviewed</strong><small class="text-[8px] text-[#828c9b]">Result described as independently verified by Apex.</small></span></div></div>
+          <div class="flex min-h-[280px] flex-col justify-center bg-[#1b2b48] p-7 text-white"><span class="text-[8px] font-bold tracking-[.13em] text-[#b4c0d3]">90-DAY PROFIT IMPACT</span><strong class="mt-2 text-[clamp(36px,5vw,49px)] font-medium tracking-[-.06em]">+$180,000</strong><span class="text-[7px] font-bold tracking-[.12em] text-[#b4c0d3]">ANNUAL RECURRING PROFIT</span><div class="case-bars mt-6"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="mt-2 flex justify-between text-[6px] font-bold tracking-widest text-[#a8b5c9]"><span>BEFORE</span><span>AFTER</span></div><small class="mt-4 text-[7px] text-[#96a5bc]">Illustrative visualization; no client video supplied.</small></div>
+        </article>
+        <p class="mt-3 max-w-[850px] text-[8px] leading-5 text-[#8791a0]">Reported outcomes are client-specific and should not be read as typical or guaranteed. Supporting documentation can be reviewed during a qualified conversation.</p>
+      </section>
+
+      <section class="bg-ink py-16 text-white sm:py-[84px]">
+        <div class="mx-auto grid w-[min(1160px,calc(100%-40px))] items-center gap-9 lg:grid-cols-[1.1fr_.9fr] lg:gap-28">
+          <div><p class="section-kicker !text-[#a9b5c9] before:!bg-[#879bbe]">RISK REVERSAL</p><h2 class="mt-5 text-[clamp(35px,4.5vw,49px)] font-semibold leading-[1.1] tracking-[-.06em]">The Margin Net-Positive Guarantee.</h2><p class="mt-5 max-w-[545px] text-[12px] leading-6 text-[#b4bdcb]">If the engagement does not identify at least <strong class="text-white">$13,500</strong> in cash leaks and margin improvements within the first 90 days, Apex refunds 100% of the advisory fees for those three months.</p><p class="mt-3 max-w-[545px] text-[12px] leading-6 text-[#b4bdcb]">That is three times the first 90 days of monthly fees. If we do not find more than you paid, you do not pay for that period.</p><details class="mt-6 border-y border-white/20"><summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-[10px] font-semibold text-[#e4e8ee]">How identified value is reviewed <span class="text-[#9ba9bd]">⌄</span></summary><div class="space-y-2 pb-4 text-[9px] leading-5 text-[#aab4c2]"><p>At kickoff, Apex and the client document the baseline, eligible cost and margin categories, attribution period, and evidence needed for each finding. Items are counted once and supported by source financial or operating records.</p><p>Potential or projected opportunities are separated from realized savings. Where the guarantee requires independent review, the supporting calculation is reviewed by a CPA. Full measurement terms are agreed in writing before the engagement begins.</p></div></details></div>
+          <div class="rounded border border-white/20 bg-white/[.045] p-6 sm:p-8"><span class="text-[8px] font-bold tracking-[.14em] text-[#a8b4c8]">90-DAY VALUE THRESHOLD</span><strong class="mt-3 block text-[clamp(48px,7vw,68px)] font-medium leading-none tracking-[-.075em]">$13,500</strong><div class="mt-4 flex flex-wrap items-center gap-2 text-[9px] text-[#c4ccda]"><span>$4,500</span><i class="not-italic text-[#7889a5]">×</i><span>3 months</span><i class="not-italic text-[#7889a5]">=</i><b class="text-[8px] text-white">100% refund if not identified</b></div><div class="mt-7 flex items-center gap-3 border-t border-white/15 pt-5 text-[9px] leading-5 text-[#bac4d2]"><span class="text-lg text-[#cbd5e1]" aria-hidden="true">◇</span><span>Clear scope. Documented baseline.<br>No market-return promises.</span></div></div>
+        </div>
+      </section>
+
+      <section id="investment" class="mx-auto w-[min(1160px,calc(100%-40px))] py-16 sm:py-24">
+        <div class="text-center"><p class="section-kicker justify-center">THE INVESTMENT</p><h2 class="mt-5 text-[clamp(32px,4.4vw,45px)] font-semibold leading-[1.12] tracking-[-.055em]">Senior financial leadership.<br><span class="serif-italic text-navy">Without a full-time CFO overhead.</span></h2><p class="mt-3 text-[12px] text-[#677386]">Two ways to engage in the 12-month program.</p></div>
+        <div class="mx-auto mt-8 grid max-w-[810px] gap-4 md:grid-cols-2">
+          <article class="rounded border border-[#dfe4eb] bg-white p-6"><span class="text-[8px] font-bold tracking-[.12em] text-[#768398]">MONTHLY ENGAGEMENT</span><h3 class="mt-3 text-[17px] font-semibold">Runway &amp; Margin Program</h3><p class="mt-1 min-h-8 text-[9px] leading-5 text-[#727d8f]">A dedicated CFO relationship with a six-month minimum.</p><div class="mt-4 flex items-baseline gap-2"><strong class="text-[40px] font-semibold tracking-[-.07em]">$4,500</strong><span class="text-[10px] text-[#768195]">/ month</span></div><hr class="my-4 border-[#e9edf2]"><ul class="mb-6 space-y-3 text-[9px] text-[#556174]"><li>✓ Dedicated fractional CFO</li><li>✓ Monthly cash flow forecast</li><li>✓ Weekly strategic sprints</li><li>✓ Unit economics and pricing review</li><li>✓ Board-ready dashboard</li></ul><button data-open-application class="w-full rounded border border-[#bdc8dc] py-3 text-[10px] font-bold text-navy transition hover:bg-[#f7f9fd]">Apply for an audit →</button></article>
+          <article class="relative rounded border border-[#9baaca] bg-white p-6 shadow-lg shadow-navy/5"><span class="absolute right-0 top-0 bg-navy px-3 py-2 text-[7px] font-bold tracking-widest text-white">BEST ANNUAL VALUE</span><span class="text-[8px] font-bold tracking-[.12em] text-[#768398]">ANNUAL PREPAID</span><h3 class="mt-3 text-[17px] font-semibold">Runway &amp; Margin Program</h3><p class="mt-1 min-h-8 text-[9px] leading-5 text-[#727d8f]">One year of forward-looking finance leadership, paid up front.</p><div class="mt-4 flex items-baseline gap-2"><strong class="text-[40px] font-semibold tracking-[-.07em]">$48,600</strong><span class="text-[10px] text-[#768195]">/ year</span></div><span class="mt-1 block text-[8px] font-bold text-navy">Save $5,400 versus monthly</span><hr class="my-4 border-[#e9edf2]"><ul class="mb-6 space-y-3 text-[9px] text-[#556174]"><li>✓ Everything in the monthly program</li><li>✓ 12-month CFO partnership</li><li>✓ Cash architecture fully implemented</li><li>✓ Margin Net-Positive Guarantee</li><li>✓ Dedicated strategic cadence</li></ul><button data-open-application class="w-full rounded bg-navy py-3 text-[10px] font-bold text-white transition hover:bg-[#183170]">Apply for an audit →</button></article>
+        </div>
+        <p class="mx-auto mt-4 max-w-[810px] text-center text-[8px] leading-5 text-[#858f9e]">A full-time CFO can exceed $250,000 per year in salary before benefits. Every engagement is scoped to the company’s actual needs.</p>
+      </section>
+
+      <section id="faq" class="mx-auto grid w-[min(1160px,calc(100%-40px))] gap-8 border-t border-[#e4e8ed] py-16 lg:grid-cols-[.78fr_1.22fr] lg:gap-28">
+        <div><p class="section-kicker">STRAIGHT ANSWERS</p><h2 class="mt-5 text-[clamp(31px,4vw,40px)] font-semibold leading-tight tracking-[-.055em]">Questions founders ask first.</h2><p class="mt-3 max-w-[300px] text-[11px] leading-6 text-[#6c7789]">No jargon. No pressure. Just the details you need to decide if this is worth a conversation.</p><button data-open-application class="mt-5 text-[11px] font-bold text-navy">Ask about your situation →</button></div>
+        <div class="divide-y divide-[#dfe4eb] border-y border-[#dfe4eb]">
+          <details class="faq-item" open><summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-[11px] font-semibold text-[#253145]"><span>How is this different from my bookkeeper?</span><span class="transition">⌄</span></summary><p class="mb-4 max-w-[590px] text-[10px] leading-5 text-[#697587]">Bookkeeping records what happened. Your Apex CFO forecasts what is likely to happen next, works through unit economics and pricing, and helps your leadership team decide what to do about it.</p></details>
+          <details class="faq-item"><summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-[11px] font-semibold text-[#253145]"><span>What is the minimum commitment?</span><span class="transition">⌄</span></summary><p class="mb-4 max-w-[590px] text-[10px] leading-5 text-[#697587]">The monthly program has a six-month minimum. The full SaaS Runway &amp; Margin Acceleration Program is designed as a 12-month engagement.</p></details>
+          <details class="faq-item"><summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-[11px] font-semibold text-[#253145]"><span>Is my financial data safe?</span><span class="transition">⌄</span></summary><p class="mb-4 max-w-[590px] text-[10px] leading-5 text-[#697587]">A mutual NDA is completed before financial system access. The engagement uses secure, permissioned access and does not require sharing credentials in this application.</p></details>
+          <details class="faq-item"><summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-[11px] font-semibold text-[#253145]"><span>What happens on the audit call?</span><span class="transition">⌄</span></summary><p class="mb-4 max-w-[590px] text-[10px] leading-5 text-[#697587]">In 30 minutes, we review your current cash questions, identify likely areas to investigate, and tell you plainly whether Apex is a fit. You leave with useful next steps either way.</p></details>
+          <details class="faq-item"><summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-[11px] font-semibold text-[#253145]"><span>How does the guarantee work?</span><span class="transition">⌄</span></summary><p class="mb-4 max-w-[590px] text-[10px] leading-5 text-[#697587]">If Apex does not identify at least $13,500 in cash leaks and margin improvements within the first 90 days, the advisory fees for those three months are refunded. The measurement approach is discussed and documented at the outset.</p></details>
+        </div>
+      </section>
+
+      <section class="bg-navy py-12 text-white sm:py-16"><div class="mobile-stack mx-auto flex w-[min(1160px,calc(100%-40px))] items-center justify-between gap-8"><div><span class="text-[8px] font-bold tracking-[.14em] text-[#c3cde0]">THE NEXT 90 DAYS START WITH CLARITY</span><h2 class="mt-3 text-[clamp(33px,4.5vw,45px)] font-semibold leading-[1.1] tracking-[-.055em]">Every month you wait,<br>the leak keeps running.</h2><p class="mt-3 max-w-[530px] text-[11px] leading-6 text-[#d1d9e7]">Get a clear picture of your cash, your margin, and what to investigate next—with a CFO who works exclusively with B2B SaaS.</p></div><div class="flex shrink-0 flex-col items-center gap-2"><button data-open-application class="mobile-cta inline-flex min-h-12 items-center justify-center gap-3 rounded-sm bg-white px-6 text-[11px] font-bold text-[#172338] transition hover:bg-[#edf1f7]">Apply for your audit →</button><span class="text-[8px] text-[#c5d0e0]">30 minutes · No pitch deck · No obligation</span></div></div></section>
+    </main>
+
+    <footer class="bg-ink px-5 py-10 text-white sm:px-0"><div class="mx-auto w-[min(1160px,calc(100%-40px))]"><div class="grid gap-8 border-b border-white/15 pb-8 sm:grid-cols-[1.4fr_.7fr_.7fr]"><div><a href="#top" class="flex items-center gap-2.5"><span class="brand-mark text-[#aebce0]" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M24.6 25.2h5.1V11.95a5.1 5.1 0 0 0-5.1-5.1H11.4v5.1m13.2 13.25v5.1H11.95a5.1 5.1 0 0 1-5.1-5.1V11.95m4.55 0v11.7l11.7-11.7h-11.7Zm13.2 13.25v-11.7l-11.7 11.7h11.7Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span class="flex flex-col leading-none"><strong class="text-[16px] font-extrabold tracking-[.17em]">APEX</strong><span class="mt-1 text-[8px] font-bold tracking-[.2em] text-[#aeb6c5]">CFO ADVISORY</span></span></a><p class="mt-3 text-[10px] text-[#a7b1c0]">Forward-looking finance for B2B SaaS founders.</p></div><div class="flex flex-col items-start gap-2.5"><span class="text-[7px] font-bold tracking-[.13em] text-[#a0aabd]">EXPLORE</span><a class="text-[9px] text-[#e1e6ef] hover:text-white" href="#services">Services</a><a class="text-[9px] text-[#e1e6ef] hover:text-white" href="#proof">Case study</a><button data-open-application class="text-[9px] text-[#e1e6ef] hover:text-white">Apply for an audit</button></div><div class="flex flex-col items-start gap-2.5"><span class="text-[7px] font-bold tracking-[.13em] text-[#a0aabd]">CONNECT</span><a class="text-[9px] text-[#e1e6ef] hover:text-white" href="https://www.linkedin.com/search/results/companies/?keywords=Apex%20CFO%20Advisory" target="_blank" rel="noreferrer">Find Apex on LinkedIn ↗</a><button data-open-application class="text-[9px] text-[#e1e6ef] hover:text-white">Contact Apex</button></div></div><div class="flex flex-col gap-2 py-4 text-[8px] text-[#a1abba] sm:flex-row sm:justify-between"><span>© <span id="currentYear"></span> Apex CFO Advisory</span><span>Financial and operational advisory for B2B SaaS.</span></div><p class="max-w-[850px] text-[7px] leading-4 text-[#788598]">Apex CFO Advisory provides institutional financial and operational advisory, not formal legal, accounting, or tax opinions. Results vary by company size, operating conditions, and market. Client results are not a guarantee of future outcomes.</p></div></footer>
+
+    <dialog id="applicationDialog" aria-label="Apex CFO Advisory application">
+      <div class="flex items-center justify-between border-b border-[#e9ecf1] px-5 py-4 sm:px-7"><div><span class="block text-[7px] font-bold tracking-[.12em] text-[#788497]">SAAS RUNWAY &amp; MARGIN AUDIT</span><span class="mt-1 block text-[8px] text-[#8590a1]">30 MINUTES · FOUNDER-TO-CFO</span></div><button type="button" data-close-application class="grid h-8 w-8 place-items-center rounded border border-[#e1e5ec] text-lg text-[#667286] hover:bg-[#f7f8fa]" aria-label="Close application">×</button></div>
+      <div class="px-5 py-5 sm:px-7 sm:py-6">
+        <div class="mb-6 grid grid-cols-3 gap-2" aria-label="Application progress"><div class="progress-segment border-t-2 border-navy pt-2 text-[7px] font-semibold text-navy">01 · YOUR DETAILS</div><div class="progress-segment border-t-2 border-[#e7eaf0] pt-2 text-[7px] font-semibold text-[#98a1af]">02 · SAAS PROFILE</div><div class="progress-segment border-t-2 border-[#e7eaf0] pt-2 text-[7px] font-semibold text-[#98a1af]">03 · BOOK</div></div>
+        <form id="applicationForm" novalidate>
+          <section class="form-step" data-step="0"><span class="text-[7px] font-bold tracking-[.13em] text-[#7d8ca5]">STEP 01 / 03</span><h2 class="mt-2 text-[22px] font-semibold tracking-tight">First, a little about you.</h2><p class="mt-1 text-[9px] leading-5 text-[#728094]">We’ll use this to make the conversation specific to your business.</p><div class="mt-5 space-y-3"><label class="block text-[9px] font-semibold text-[#354156]">Full name<input class="form-input mt-1.5" name="name" autocomplete="name" placeholder="Your name" required></label><label class="block text-[9px] font-semibold text-[#354156]">Work email<input class="form-input mt-1.5" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></label><label class="block text-[9px] font-semibold text-[#354156]">Company name and website<input class="form-input mt-1.5" name="company" autocomplete="organization" placeholder="Company · website.com" required></label></div><button type="button" data-next class="mt-5 flex min-h-11 w-full items-center justify-center gap-2 rounded-sm bg-navy text-[10px] font-bold text-white hover:bg-[#183170]">Continue to your SaaS profile →</button><p class="mt-3 text-center text-[7px] text-[#8a94a3]">No sensitive financial files or account credentials needed.</p></section>
+          <section class="form-step" data-step="1" hidden><span class="text-[7px] font-bold tracking-[.13em] text-[#7d8ca5]">STEP 02 / 03</span><h2 class="mt-2 text-[22px] font-semibold tracking-tight">Give us the operating context.</h2><p class="mt-1 text-[9px] leading-5 text-[#728094]">These ranges help us make the audit useful from the first minute.</p><div class="mt-5 space-y-3"><label class="block text-[9px] font-semibold text-[#354156]">Current monthly recurring revenue<select class="form-input mt-1.5" name="mrr" required><option value="" disabled selected>Select your MRR range</option><option>Under $150k</option><option>$150k–$400k</option><option>$400k–$800k</option><option>Above $800k</option></select></label><label class="block text-[9px] font-semibold text-[#354156]">Current finance setup<select class="form-input mt-1.5" name="financeSetup" required><option value="" disabled selected>Select your current setup</option><option>Bookkeeper</option><option>In-house accountant</option><option>Spreadsheet only</option><option>Other</option></select></label><label class="block text-[9px] font-semibold text-[#354156]">What’s your biggest cash question right now?<textarea class="form-input mt-1.5" name="cashQuestion" placeholder="For example: How much runway do we have if we hire two engineers?" required></textarea></label></div><div class="mt-5 flex items-center justify-between"><button type="button" data-back class="px-2 py-2 text-[9px] font-semibold text-[#596579] hover:text-navy">← Back</button><button type="button" data-next class="inline-flex min-h-10 items-center gap-2 rounded-sm bg-navy px-4 text-[9px] font-bold text-white hover:bg-[#183170]">Review &amp; book →</button></div><p class="mt-3 text-center text-[7px] text-[#8a94a3]">A mutual NDA is completed before financial system access.</p></section>
+          <section class="form-step" data-step="2" hidden><span class="text-[7px] font-bold tracking-[.13em] text-[#7d8ca5]">STEP 03 / 03</span><h2 class="mt-2 text-[22px] font-semibold tracking-tight">Your audit session.</h2><p class="mt-1 text-[9px] leading-5 text-[#728094]">Review the details, then choose a time for a 30-minute founder-to-CFO conversation.</p><div id="applicationSummary" class="mt-5 divide-y divide-[#e8ebf0] rounded border border-[#e8ebf0] bg-[#fafbfc] text-[9px]"></div><div class="mt-4 rounded border border-[#e1e5eb] bg-[#f6f7f9] p-3"><strong class="block text-[9px] text-[#344055]">Booking connection not configured</strong><p class="mt-1 text-[8px] leading-5 text-[#778295]">Set <code>NEXT_PUBLIC_BOOKING_URL</code> and connect a form-delivery destination before this static page can send applications or schedule calls.</p></div><p class="mt-3 text-center text-[7px] leading-4 text-[#8a94a3]">Your answers stay in this browser session; they are not sent or stored. Avoid entering confidential financial details.</p><button type="button" data-back class="mt-3 w-full py-2 text-[9px] font-semibold text-[#596579] hover:text-navy">← Edit your answers</button></section>
+        </form>
+      </div>
+      <div class="flex items-center justify-between border-t border-[#e9ecf1] px-5 py-3 text-[7px] text-[#8993a2] sm:px-7"><strong class="tracking-[.1em]">APEX CFO ADVISORY</strong><button type="button" data-close-application class="hover:text-navy">Return to website</button></div>
+    </dialog>
+
+    <script>
+      const money = (amount) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(amount)
+      const calculatorInputs = ['cashInput', 'outflowInput', 'receiptsInput'].map((id) => document.getElementById(id))
+      const calculatorResult = document.getElementById('calculatorResult')
+      const initialResult = '<span class="block text-[6px] font-bold tracking-[.12em] text-[#778397]">YOUR ESTIMATE WILL APPEAR HERE</span><strong class="mt-1 block text-[17px] font-semibold tracking-tight text-[#344055]">Enter your three numbers</strong><small class="mt-1 block text-[8px] text-[#7d8898]">Values are calculated in this browser and are not saved.</small>'
+
+      function updateRunwayEstimate() {
+        const rawValues = calculatorInputs.map((input) => input.value)
+        if (rawValues.some((value) => value === '') || calculatorInputs.some((input) => Number(input.value) < 0)) {
+          calculatorResult.classList.remove('border-[#c9d3e4]', 'bg-[#f5f7fb]')
+          calculatorResult.innerHTML = initialResult
+          return
+        }
+        const [cash, outflow, receipts] = rawValues.map(Number)
+        const netBurn = outflow - receipts
+        const runway = netBurn > 0 ? cash / netBurn : null
+        const heading = runway === null ? (netBurn === 0 ? 'Break-even' : 'Cash-flow positive') : `${runway.toFixed(1)} months`
+        const label = runway === null ? 'CURRENT CASH POSITION' : 'ESTIMATED CASH RUNWAY'
+        const note = runway === null ? `Monthly operations are ${money(Math.abs(netBurn))} ${netBurn === 0 ? 'at break-even' : 'cash-flow positive'}.` : `${money(netBurn)} estimated monthly net burn.`
+        calculatorResult.classList.add('border-[#c9d3e4]', 'bg-[#f5f7fb]')
+        calculatorResult.innerHTML = `<span class="block text-[6px] font-bold tracking-[.12em] text-[#778397]">${label}</span><strong class="mt-1 block text-[17px] font-semibold tracking-tight text-navy">${heading}</strong><small class="mt-1 block text-[8px] text-[#7d8898]">${note}</small>`
+      }
+      calculatorInputs.forEach((input) => input.addEventListener('input', updateRunwayEstimate))
+
+      const dialog = document.getElementById('applicationDialog')
+      const form = document.getElementById('applicationForm')
+      const steps = [...form.querySelectorAll('.form-step')]
+      const progress = [...document.querySelectorAll('.progress-segment')]
+      let activeStep = 0
+
+      function renderStep() {
+        steps.forEach((step, index) => { step.hidden = index !== activeStep })
+        progress.forEach((item, index) => {
+          item.classList.toggle('border-navy', index <= activeStep)
+          item.classList.toggle('text-navy', index === activeStep)
+          item.classList.toggle('border-[#e7eaf0]', index > activeStep)
+          item.classList.toggle('text-[#98a1af]', index !== activeStep)
+        })
+      }
+      function updateSummary() {
+        const values = new FormData(form)
+        const rows = [
+          ['APPLICANT', String(values.get('name') || ''), String(values.get('email') || '')],
+          ['COMPANY', String(values.get('company') || ''), `${values.get('mrr') || ''} MRR · ${values.get('financeSetup') || ''}`],
+          ['BIGGEST CASH QUESTION', String(values.get('cashQuestion') || '')],
+        ]
+        document.getElementById('applicationSummary').replaceChildren(...rows.map(([label, value, detail]) => {
+          const row = document.createElement('div')
+          row.className = 'flex flex-col gap-1 p-3'
+          const heading = document.createElement('span')
+          heading.className = 'text-[6px] font-bold tracking-[.12em] text-[#8590a0]'
+          heading.textContent = label
+          const content = document.createElement('strong')
+          content.className = 'font-semibold text-[#29364a]'
+          content.textContent = value
+          row.append(heading, content)
+          if (detail) {
+            const small = document.createElement('small')
+            small.className = 'text-[#6f7c90]'
+            small.textContent = detail
+            row.append(small)
+          }
+          return row
+        }))
+      }
+
+      document.querySelectorAll('[data-open-application]').forEach((button) => button.addEventListener('click', () => {
+        if (!dialog.open) dialog.showModal()
+      }))
+      document.querySelectorAll('[data-close-application]').forEach((button) => button.addEventListener('click', () => dialog.close()))
+      document.querySelectorAll('[data-next]').forEach((button) => button.addEventListener('click', () => {
+        const currentStep = steps[activeStep]
+        const requiredFields = [...currentStep.querySelectorAll('input, select, textarea')]
+        const invalidField = requiredFields.find((field) => !field.checkValidity())
+        if (invalidField) {
+          invalidField.reportValidity()
+          return
+        }
+        if (activeStep < steps.length - 1) {
+          activeStep += 1
+          if (activeStep === 2) updateSummary()
+          renderStep()
+        }
+      }))
+      document.querySelectorAll('[data-back]').forEach((button) => button.addEventListener('click', () => {
+        activeStep = Math.max(0, activeStep - 1)
+        renderStep()
+      }))
+      document.getElementById('currentYear').textContent = new Date().getFullYear()
+      renderStep()
+    </script>
+  </body>
+</html>
